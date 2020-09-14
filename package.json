@@ -1,0 +1,57 @@
+{
+  "name": "dotty-syntax",
+  "displayName": "[TEMPORARY] Dotty Indentation Syntax",
+  "description": "Support for Dotty indentation syntax on top of Metals, temporary until this is integrated into vscode-scala-syntax",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "publisher": "lampepfl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smarter/vscode-dotty-syntax.git"
+  },
+  "icon": "images/dotty-logo.png",
+  "engines": {
+    "vscode": "^1.45.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "scala",
+    "dotty"
+  ],
+  "main": "./out/src/extension",
+  "activationEvents": [
+    "onLanguage:scala"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "scala",
+        "extensions": [
+          ".scala",
+          ".sc"
+        ],
+        "aliases": [
+          "Scala"
+        ]
+      }
+    ],
+    "files.associations": {
+      "*.sc": "scala"
+    }
+  },
+  "scripts": {
+    "tsc": "./node_modules/.bin/tsc",
+    "vscode:prepublish": "npm install && ./node_modules/.bin/tsc -p ./",
+    "compile": "./node_modules/.bin/tsc -p ./"
+  },
+  "extensionDependencies": [
+    "scalameta.metals"
+  ],
+  "devDependencies": {
+    "@types/node": "^12.12.0",
+    "@types/vscode": "^1.45.0",
+    "typescript": "^4.0.2"
+  }
+}
