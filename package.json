@@ -22,7 +22,14 @@
   ],
   "main": "./out/src/extension",
   "activationEvents": [
-    "onLanguage:scala"
+    "onDebugResolve:scala",
+    "onLanguage:scala",
+    "workspaceContains:build.sbt",
+    "workspaceContains:build.sc",
+    "workspaceContains:project/build.properties",
+    "workspaceContains:src/main/scala",
+    "workspaceContains:*/src/main/scala",
+    "workspaceContains:*/*/src/main/scala"
   ],
   "contributes": {
     "languages": [
