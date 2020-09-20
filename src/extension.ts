@@ -2,11 +2,11 @@ import { ExtensionContext,  Disposable } from 'vscode'
 import * as vscode from 'vscode'
 
 const keywords = [
-  "abstract", "case", "catch", "class", "def", "derives", "do", "enum", "erased", "else",
+  "abstract", "as", "case", "catch", "class", "def", "derives", "do", "enum", "erased", "else",
   "end", "export", "extends", "extension", "false", "final", "finally", "for", "given",
-  "if", "implicit", "import", "lazy", "match", "new", "null", "object", "override", "package",
+  "if", "implicit", "import", "inline", "lazy", "match", "new", "null", "object", "open", "override", "package",
   "private", "protected", "return", "sealed", "super", "then", "this", "throw", "trait",
-  "transparent", "try", "true", "type", "val", "var", "while", "with", "yield"
+  "transparent", "try", "true", "type", "using", "val", "var", "while", "with", "yield"
 ]
 
 class KeywordCompletionItemProvider implements vscode.CompletionItemProvider {
