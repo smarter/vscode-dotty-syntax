@@ -31,9 +31,9 @@ export function activate(ctx: ExtensionContext) {
       // Auto-indent when pressing enter on a line matching this regexp, in details:
       // 1. If they're not preceded by `end`, auto-indent after `while`, `for`, `match`, `try`, `if`
       // 2. Auto-indent after `if ...` as long as it doesn't match `if ... then ...`
-      // 3. Auto-indent after `then`, `else`, `do`, `catch`, `finally`, `yield`, `case`, `=`, `=>`, `<-`, `=>>`x
+      // 3. Auto-indent after `then`, `else`, `do`, `catch`, `finally`, `yield`, `case`, `=`, `=>`, `<-`, `=>>`, `:`
       "increaseIndentPattern":
-        /(((?<!\bend\b\s*?)\b(if|while|for|match|try))|(\bif\s+(?!.*?\bthen\b.*?$)[^\s]*?)|(\b(then|else|do|catch|finally|yield|case))|=|=>|<-|=>>)\s*?$/,
+        /(((?<!\bend\b\s*?)\b(if|while|for|match|try))|(\bif\s+(?!.*?\bthen\b.*?$)[^\s]*?)|(\b(then|else|do|catch|finally|yield|case))|=|=>|<-|=>>|:)\s*?$/,
       // Only auto-unindent completed `end` followed by `while`, `for`, `match`, `try`, `if`
       "decreaseIndentPattern": /(^\s*end\b\s*)\b(if|while|for|match|try)$/
     }
